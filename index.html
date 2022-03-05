@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>360 Viewer | eVision</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: inline-block;
+        padding: 20px;
+        background-color: chocolate;
+        position: relative;
+        top: 5vh;
+        border-radius: 20px;
+        height: 435px;
+        width: 715;
+        object-fit: cover;
+        left: 25vw;
+      "
+    >
+      <div
+        id="demo"
+        style="
+          background-image: 0.1s cubic-bezier(0.52, 0.54, 0.53, 0.52) 0s;
+          height: 440px;
+          width: 709px;
+          background-size: cover;
+        "
+      ></div>
+    </div>
+
+    <div
+      style="
+        font-size: large;
+        position: fixed;
+        left: 50vw;
+        top: 90vh; /* font-style: oblique; */
+        font-family: monospace;
+      "
+    >
+      Created By | eVision 2020
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/3deye.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#demo").vc3dEye({
+          imagePath: "images2/", // the location where you’ve put the images.
+          totalImages: 90, // the number of images you have.
+          imageExtension: "jpg", // the extension of the images. Make sure all the images have same extension.
+        });
+      });
+    </script>
+  </body>
+</html>
